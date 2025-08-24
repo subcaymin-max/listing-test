@@ -1,0 +1,62 @@
+{
+  "yelp": {
+    "_meta": {
+      "notes": "Two Yelp layouts supported. Detector XPath determines if 'type1' is present; otherwise fallback to 'type2'."
+    },
+    "detector_xpath": "/html/body/yelp-react-root/div[1]/div[3]/div[3]/div[4]/div/div[1]/div[2]/aside/section[1]/div/div/div/div[2]/h5",
+    "type1": {
+      "entity_name": "//h1",
+      "address": "/html/body/yelp-react-root/div[1]/div[3]/div[3]/div[4]/div/div[1]/div[2]/aside/section[2]/div/div[3]/div/div[2]/p[2]",
+      "phone": "//a[contains(@href,'tel:')]",
+      "website_link_anchor": "//a[contains(@href,'/biz_redir') and contains(@href,'url=')]",
+      "hours": "//table[contains(@class,'hours-table')]//td[last()]//p | //p[contains(@class,'hours')]"
+    },
+    "type2": {
+      "entity_name": "//h1",
+      "address": "/html/body/yelp-react-root/div[1]/div[3]/div[3]/div[3]/div/div[1]/div[2]/aside/section[1]/div/div[3]/div/div[2]/p[2]",
+      "phone": "//a[contains(@href,'tel:')]",
+      "website_link_anchor": "//a[contains(@href,'/biz_redir') and contains(@href,'url=')]",
+      "hours": "//table[contains(@class,'hours-table')]//td[last()]//p | //p[contains(@class,'hours')]"
+    }
+  },
+  "google": {
+    "_meta": {
+      "notes": "Highly dynamic. Supply your own robust XPaths in the UI."
+    },
+    "entity_name": "",
+    "address": "",
+    "phone": "",
+    "website_link_anchor": "",
+    "hours": ""
+  },
+  "apple": {
+    "_meta": {
+      "notes": "Apple Maps web layout is dynamic; use XPath Manager to define."
+    },
+    "entity_name": "",
+    "address": "",
+    "phone": "",
+    "website_link_anchor": "",
+    "hours": ""
+  },
+  "bing": {
+    "_meta": {
+      "notes": "Bing Places page layout may vary; add XPaths per locale."
+    },
+    "entity_name": "",
+    "address": "",
+    "phone": "",
+    "website_link_anchor": "",
+    "hours": ""
+  },
+  "yahoo": {
+    "_meta": {
+      "notes": "Yahoo Local pages vary widely."
+    },
+    "entity_name": "",
+    "address": "",
+    "phone": "",
+    "website_link_anchor": "",
+    "hours": ""
+  }
+}
