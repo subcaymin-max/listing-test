@@ -1,0 +1,5 @@
+# Optional apt packages for building lxml if wheels are unavailable
+libxml2-dev
+libxslt1-dev
+zlib1g-dev
+gcc

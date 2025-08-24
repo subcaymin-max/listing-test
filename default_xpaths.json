@@ -21,7 +21,7 @@
   },
   "google": {
     "_meta": {
-      "notes": "Highly dynamic. Supply your own robust XPaths in the UI."
+      "notes": "Define via XPath Manager"
     },
     "entity_name": "",
     "address": "",
@@ -31,7 +31,7 @@
   },
   "apple": {
     "_meta": {
-      "notes": "Apple Maps web layout is dynamic; use XPath Manager to define."
+      "notes": "Define via XPath Manager"
     },
     "entity_name": "",
     "address": "",
@@ -41,7 +41,7 @@
   },
   "bing": {
     "_meta": {
-      "notes": "Bing Places page layout may vary; add XPaths per locale."
+      "notes": "Define via XPath Manager"
     },
     "entity_name": "",
     "address": "",
@@ -51,7 +51,7 @@
   },
   "yahoo": {
     "_meta": {
-      "notes": "Yahoo Local pages vary widely."
+      "notes": "Define via XPath Manager"
     },
     "entity_name": "",
     "address": "",

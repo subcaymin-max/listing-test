@@ -1,6 +1,6 @@
 import sqlite3
 from contextlib import contextmanager
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional
 
 DB_PATH = "data.db"
 
@@ -37,11 +37,11 @@ def init_db():
         c.execute("""
             CREATE TABLE IF NOT EXISTS xpaths (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                site TEXT NOT NULL,            -- google, apple, bing, yelp, yahoo
-                layout TEXT,                   -- for yelp: type1/type2; else null
-                field TEXT NOT NULL,           -- entity_name, address, phone, website_link_anchor, hours
+                site TEXT NOT NULL,
+                layout TEXT,
+                field TEXT NOT NULL,
                 xpath TEXT NOT NULL,
-                priority INTEGER DEFAULT 1,    -- lower = higher priority
+                priority INTEGER DEFAULT 1,
                 active INTEGER DEFAULT 1
             )
         """)
@@ -127,4 +127,3 @@ def toggle_xpath_active(xpath_id: int, active: bool):
 def delete_xpath(xpath_id: int):
     with get_conn() as conn:
         conn.execute("DELETE FROM xpaths WHERE id = ?", (xpath_id,))
-
